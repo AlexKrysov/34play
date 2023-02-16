@@ -1,9 +1,11 @@
 package com.krysov.tests;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class CheckBasketTests extends TestBase{
 
+    @DisplayName("Проверка наличия товара в корзине, после добавления")
     @Test
     void checkingItemsInBasket () {
         open34play.open34play();
@@ -11,8 +13,33 @@ public class CheckBasketTests extends TestBase{
         confirmPage.confirmRegion();
         authorization.authorization();
         itemPage.setAddToBasket();
+        navigatioPage.stepToBasket();
         checkPage.checkItem();
+        itemPage.setDeleteFromBasket();
+    }
+    @DisplayName("Проверка общей суммы товаров в корзине, после добавления")
+    @Test
+    void checkingTotalSumInBasket () {
+        open34play.open34play();
+        confirmPage.confirmAge();
+        confirmPage.confirmRegion();
+        authorization.authorization();
+        itemPage.setAddToBasket();
+        navigatioPage.stepToBasket();
         checkPage.checkTotalSum();
         itemPage.setDeleteFromBasket();
+    }
+    @DisplayName("Проверка отсутсвия товаров в корзине, после удаления позиций")
+    @Test
+    void checkingEmptyBasketAfterDeletion () {
+        open34play.open34play();
+        confirmPage.confirmAge();
+        confirmPage.confirmRegion();
+        authorization.authorization();
+        itemPage.setAddToBasket();
+        navigatioPage.stepToBasket();
+        checkPage.checkItem();
+        itemPage.setDeleteFromBasket();
+        checkPage.checkEmptyBasket();
     }
 }

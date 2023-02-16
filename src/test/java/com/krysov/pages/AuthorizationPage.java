@@ -10,13 +10,14 @@ public class AuthorizationPage {
     private SelenideElement
             loginInput = $("[name='login']"),
             passwordInput = $("[name='password']"),
-            authorizationButton = $(".submit");
+            authorizationButton = $(".submit"),
+            enterButton = $("[data-action=userLogin]");
     private String login = "krysov-95@mail.ru";
     private String password = "28s46e37r19IA";
 
     public AuthorizationPage authorization() {
         step("Авторизация", () -> {
-            $("[data-action=userLogin]").click();
+            enterButton.click();
             loginInput.setValue(login);
             passwordInput.setValue(password);
             authorizationButton.click();

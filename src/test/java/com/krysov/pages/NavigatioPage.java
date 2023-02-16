@@ -8,11 +8,25 @@ import static io.qameta.allure.Allure.step;
 public class NavigatioPage {
 
     private SelenideElement
-    basket = $(".cart");
+            basket = $(".cart"),
+            authorizationButton = $(".submit"),
+            enterButton = $("[data-action=userLogin]");
 
     public void stepToBasket() {
         step("Переход в корзину", () -> {
             basket.click();
+        });
+    }
+
+    public void clickInputButton() {
+        step("Клик на кнопку ВОЙТИ", () -> {
+            authorizationButton.click();
+        });
+    }
+
+    public void clickEnterButton() {
+        step("Клик на кнопку ВХОД", () -> {
+            enterButton.click();
         });
     }
 }
