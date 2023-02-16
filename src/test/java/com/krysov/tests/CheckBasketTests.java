@@ -10,5 +10,9 @@ public class CheckBasketTests extends TestBase{
         confirmPage.confirmAge();
         confirmPage.confirmRegion();
         authorization.authorization();
+        itemPage.setAddToBasket();
+        checkPage.checkItem();
+        checkPage.checkTotalSum();
+        itemPage.setDeleteFromBasket();
     }
 }
