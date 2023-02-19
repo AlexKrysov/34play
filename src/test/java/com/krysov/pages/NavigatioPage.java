@@ -31,7 +31,7 @@ public class NavigatioPage {
         });
     }
     public void closeWebDriver() {
-        step("Клик на кнопку ВХОД", () -> {
+        step("Закрвть браузер", () -> {
             Selenide.closeWebDriver();;
         });
     }
