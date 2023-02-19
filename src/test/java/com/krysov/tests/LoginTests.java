@@ -1,5 +1,6 @@
 package com.krysov.tests;
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,7 @@ public class LoginTests extends TestBase {
         confirmPage.confirmRegion();
         authorization.authorization();
         checkPage.checkPersonalAccount();
+        Selenide.clearBrowserCookies();
 //        navigatioPage.closeWebDriver();
     }
 
@@ -31,7 +33,8 @@ public class LoginTests extends TestBase {
         randomData.getRandomPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
-        navigatioPage.closeWebDriver();
+//        navigatioPage.closeWebDriver();
+        Selenide.clearBrowserCookies();
     }
 
     @Tag("Authorization1")
