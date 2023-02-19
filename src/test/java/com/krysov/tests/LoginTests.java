@@ -36,7 +36,7 @@ public class LoginTests extends TestBase{
         navigatioPage.closeWebDriver();
     }
 
-    @Tag("Authorization")
+    @Tag("Authorization1")
     @DisplayName("Проверка ввода невалидного логина и валидного пароля")
     @Test
     void authorizationWithRandomPassword() {
@@ -51,7 +51,7 @@ public class LoginTests extends TestBase{
         navigatioPage.closeWebDriver();
     }
 
-    @Tag("Authorization")
+    @Tag("Authorization1")
     @DisplayName("Проверка ввода невалидного логина и пароля")
     @Test
     void authorizationWithRandomPasswordLogin() {
