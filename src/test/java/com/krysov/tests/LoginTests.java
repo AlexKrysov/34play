@@ -31,7 +31,7 @@ public class LoginTests extends TestBase {
         randomData.getRandomPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
-//        navigatioPage.closeWebDriver();
+        navigatioPage.closeWebDriver();
     }
 
     @Tag("Authorization1")
