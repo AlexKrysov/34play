@@ -1,5 +1,6 @@
 package com.krysov.tests;
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -19,6 +20,7 @@ public class CheckBasketTests extends TestBase{
         navigatioPage.stepToBasket();
         checkPage.checkItem();
         itemPage.setDeleteFromBasket();
+        navigatioPage.closeWebDriver();
     }
     @DisplayName("Проверка общей суммы товаров в корзине, после добавления")
     @Test
@@ -31,6 +33,7 @@ public class CheckBasketTests extends TestBase{
         navigatioPage.stepToBasket();
         checkPage.checkTotalSum();
         itemPage.setDeleteFromBasket();
+        navigatioPage.closeWebDriver();
     }
     @DisplayName("Проверка отсутсвия товаров в корзине, после удаления позиций")
     @Test
@@ -44,5 +47,6 @@ public class CheckBasketTests extends TestBase{
         checkPage.checkItem();
         itemPage.setDeleteFromBasket();
         checkPage.checkEmptyBasket();
+        navigatioPage.closeWebDriver();
     }
 }

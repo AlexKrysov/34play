@@ -1,5 +1,6 @@
 package com.krysov.pages;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -27,6 +28,11 @@ public class NavigatioPage {
     public void clickEnterButton() {
         step("Клик на кнопку ВХОД", () -> {
             enterButton.click();
+        });
+    }
+    public void closeWebDriver() {
+        step("Клик на кнопку ВХОД", () -> {
+            Selenide.closeWebDriver();;
         });
     }
 }

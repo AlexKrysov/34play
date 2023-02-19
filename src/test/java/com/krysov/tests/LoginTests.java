@@ -18,7 +18,7 @@ public class LoginTests extends TestBase{
         confirmPage.confirmRegion();
         authorization.authorization();
         checkPage.checkPersonalAccount();
-        Selenide.closeWebDriver();
+        navigatioPage.closeWebDriver();
     }
 
     @Tag("Authorization")
@@ -33,7 +33,7 @@ public class LoginTests extends TestBase{
         randomData.getRandomPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
-        Selenide.closeWebDriver();
+        navigatioPage.closeWebDriver();
     }
 
     @Tag("Authorization")
@@ -48,7 +48,7 @@ public class LoginTests extends TestBase{
         randomData.getPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
-        Selenide.closeWebDriver();
+        navigatioPage.closeWebDriver();
     }
 
     @Tag("Authorization")
@@ -63,6 +63,6 @@ public class LoginTests extends TestBase{
         randomData.getRandomPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
-        Selenide.closeWebDriver();
+        navigatioPage.closeWebDriver();
     }
 }

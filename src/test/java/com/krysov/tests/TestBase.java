@@ -26,6 +26,5 @@ public class TestBase {
         Configuration.baseUrl = "https://www.34play.me/";
         Configuration.timeout = 10000;
         holdBrowserOpen = true;
-//        browserSize = "1920x1080";
     }
 }
