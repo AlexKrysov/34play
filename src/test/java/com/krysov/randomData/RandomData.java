@@ -1,11 +1,9 @@
 package com.krysov.randomData;
 
 import com.codeborne.selenide.SelenideElement;
-import com.krysov.pages.AuthorizationPage;
 import com.github.javafaker.Faker;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;
 
 public class RandomData {
