@@ -56,3 +56,14 @@ tasks.withType(Test) {
         }
     }
 }
+
+task authorization_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'Authorization'
+    }
+}
+task basket_test(type: Test) {
+    useJUnitPlatform {
+        includeTags 'Basket'
+    }
+}

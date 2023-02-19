@@ -1,10 +1,13 @@
 package com.krysov.tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("Basket")
 public class CheckBasketTests extends TestBase{
 
+//    @Tag("Basket")
     @DisplayName("Проверка наличия товара в корзине, после добавления")
     @Test
     void checkingItemsInBasket () {

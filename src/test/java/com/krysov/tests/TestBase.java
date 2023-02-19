@@ -5,6 +5,7 @@ import com.krysov.pages.*;
 import com.krysov.randomData.RandomData;
 import org.junit.jupiter.api.BeforeAll;
 
+import static com.codeborne.selenide.Configuration.browserSize;
 import static com.codeborne.selenide.Configuration.holdBrowserOpen;
 
 public class TestBase {
@@ -24,6 +25,7 @@ public class TestBase {
         Configuration.remote = System.getProperty("selenoidUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.baseUrl = "https://www.34play.me/";
         Configuration.timeout = 10000;
-//        holdBrowserOpen = true;
+        holdBrowserOpen = true;
+//        browserSize = "1920x1080";
     }
 }

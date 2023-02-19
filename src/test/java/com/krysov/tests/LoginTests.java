@@ -1,10 +1,15 @@
 package com.krysov.tests;
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
+
 
 public class LoginTests extends TestBase{
 
+    @Tag("Authorization")
     @DisplayName("Проверка входа, после ввода валидного логина и пароля")
     @Test
     void authorizationWithValidData() {
@@ -13,8 +18,10 @@ public class LoginTests extends TestBase{
         confirmPage.confirmRegion();
         authorization.authorization();
         checkPage.checkPersonalAccount();
+        Selenide.closeWebDriver();
     }
 
+    @Tag("Authorization")
     @DisplayName("Проверка ввода валидного логина и невалидного пароля")
     @Test
     void authorizationWithRandomLogin() {
@@ -26,8 +33,10 @@ public class LoginTests extends TestBase{
         randomData.getRandomPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
+        Selenide.closeWebDriver();
     }
 
+    @Tag("Authorization")
     @DisplayName("Проверка ввода невалидного логина и валидного пароля")
     @Test
     void authorizationWithRandomPassword() {
@@ -39,8 +48,10 @@ public class LoginTests extends TestBase{
         randomData.getPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
+        Selenide.closeWebDriver();
     }
 
+    @Tag("Authorization")
     @DisplayName("Проверка ввода невалидного логина и пароля")
     @Test
     void authorizationWithRandomPasswordLogin() {
@@ -52,5 +63,6 @@ public class LoginTests extends TestBase{
         randomData.getRandomPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
+        Selenide.closeWebDriver();
     }
 }
