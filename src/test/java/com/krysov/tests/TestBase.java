@@ -30,7 +30,6 @@ public class TestBase {
         Configuration.remote = System.getProperty("selenoidUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.baseUrl = "https://www.34play.me/";
         Configuration.timeout = 10000;
-        holdBrowserOpen = true;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
