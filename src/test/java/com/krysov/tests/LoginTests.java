@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class LoginTests extends TestBase {
 
-    @Tag("Authorization")
+    @Tag("Authorization1")
     @DisplayName("Проверка входа, после ввода валидного логина и пароля")
     @Test
     void authorizationWithValidData() {
@@ -31,7 +31,7 @@ public class LoginTests extends TestBase {
         randomData.getRandomPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
-        navigatioPage.closeWebDriver();
+//        navigatioPage.closeWebDriver();
     }
 
     @Tag("Authorization1")
