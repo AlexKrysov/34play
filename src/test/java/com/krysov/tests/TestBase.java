@@ -18,7 +18,12 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
-        holdBrowserOpen = true;
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        Configuration.remote = System.getProperty("selenoidUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.baseUrl = "https://www.34play.me/";
+        Configuration.timeout = 10000;
+//        holdBrowserOpen = true;
     }
 }
