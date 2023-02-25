@@ -56,6 +56,11 @@ task authorization_tests(type: Test) {
         includeTags 'Authorization'
     }
 }
+task authorization_tests2(type: Test) {
+    useJUnitPlatform {
+        includeTags 'NegativeAuthorization'
+    }
+}
 task basket_test(type: Test) {
     useJUnitPlatform {
         includeTags 'Basket'
