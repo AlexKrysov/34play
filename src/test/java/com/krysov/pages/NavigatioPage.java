@@ -30,9 +30,9 @@ public class NavigatioPage {
             enterButton.click();
         });
     }
-    public void closeWebDriver() {
-        step("Закрвть браузер", () -> {
-            Selenide.closeWebDriver();;
+    public void clearBrowser() {
+        step("Очистить браузер", () -> {
+            Selenide.clearBrowserCookies();;
         });
     }
 }

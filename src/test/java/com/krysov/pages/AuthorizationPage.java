@@ -24,4 +24,12 @@ public class AuthorizationPage {
         });
         return this;
     }
+
+    public void authForm(String login, String password) {
+        step("Авторизация", () -> {
+            loginInput.setValue(login);
+            passwordInput.setValue(password);
+            authorizationButton.click();
+        });
+    }
 }
