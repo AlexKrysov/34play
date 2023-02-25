@@ -13,7 +13,7 @@ public class ItemPage {
             topPanel = $("._ws", 0),
             tshirt = $(".subnav__list", 0).$(byText("Футболки")),
             tshirt3199 = $("[data-product-id='3199']"),
-            sizeS = $("[data-total='2']"),
+            sizeS = $("[data-total='1']"),
             addToBasket = $("[data-txt='Положить в корзину']"),
             basket = $(".cart"),
             delete = $("._del_row", 1),
