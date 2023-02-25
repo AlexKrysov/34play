@@ -96,7 +96,7 @@
 
 ## 🧪: Suites
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/suites.png">
+<img title="Allure Overview Dashboard" src="images/screens/Suites.png">
 </p>
 
 ## 💹: Graphs
@@ -116,4 +116,4 @@
 
 
 ## <img src="images/logo/Selenoid.svg" width="25" height="25" alt="Allure"/></a> Запись видео из Selenoid при прохождении автотеста:
-![Test](images/gif/123.gif)
+![Test](images/gif/video.gif)
