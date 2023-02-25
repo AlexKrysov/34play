@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 public class LoginTests extends TestBase {
 
-    @Tag("Authorization1")
+    @Tag("Authorization")
     @DisplayName("Проверка входа, после ввода валидного логина и пароля")
     @Test
     void authorizationWithValidData() {
@@ -21,8 +21,8 @@ public class LoginTests extends TestBase {
         navigatioPage.clearBrowser();
     }
 
-    @Tag("Authorization1")
-    @DisplayName("Проверка ввода валидного логина и невалидного пароля")
+    @Tag("NegativeAuthorization")
+    @DisplayName("Проверка ввода валидного логина и невалидного, рандомного пароля")
     @Test
     void authorizationWithRandomLogin() {
         open34play.open34play();
@@ -36,8 +36,8 @@ public class LoginTests extends TestBase {
         navigatioPage.clearBrowser();
     }
 
-    @Tag("Authorization1")
-    @DisplayName("Проверка ввода невалидного логина и валидного пароля")
+    @Tag("NegativeAuthorization")
+    @DisplayName("Проверка ввода невалидного, рандомного логина и валидного пароля")
     @Test
     void authorizationWithRandomPassword() {
         open34play.open34play();
@@ -51,8 +51,8 @@ public class LoginTests extends TestBase {
         navigatioPage.clearBrowser();
     }
 
-    @Tag("Authorization1")
-    @DisplayName("Проверка ввода невалидного логина и пароля")
+    @Tag("NegativeAuthorization")
+    @DisplayName("Проверка ввода невалидного, рандомного логина и пароля")
     @Test
     void authorizationWithRandomPasswordLogin() {
         open34play.open34play();
@@ -68,12 +68,12 @@ public class LoginTests extends TestBase {
 
     @Tag("NegativeAuthorization")
     @CsvSource({
-            "simple@mail.ru, 123",
-            "simple@mail.ru, 1234",
-            "simple@mail.ru, 12345",
+            "qaguru1@mail.ru, 11111",
+            "qaguru2@mail.ru, 22222",
+            "qaguru3@mail.ru, 33333",
     })
-    @ParameterizedTest(name = "Проверка ввода логина {0} и невалидного пароля: {1}")
-    void authorizationWithOwner(String email, String password) {
+    @ParameterizedTest(name = "Проверка ввода невалидного логина {0} и невалидного пароля: {1}")
+    void negativeAuthorization(String email, String password) {
         open34play.open34play();
         confirmPage.confirmAge();
         confirmPage.confirmRegion();

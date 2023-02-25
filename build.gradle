@@ -56,7 +56,7 @@ task authorization_tests(type: Test) {
         includeTags 'Authorization'
     }
 }
-task authorization_tests2(type: Test) {
+task authorization_tests_negative(type: Test) {
     useJUnitPlatform {
         includeTags 'NegativeAuthorization'
     }
