@@ -18,7 +18,6 @@ public class LoginTests extends TestBase {
         confirmPage.confirmRegion();
         authorization.authorization();
         checkPage.checkPersonalAccount();
-        navigatioPage.clearBrowser();
     }
 
     @Tag("NegativeAuthorization")
@@ -33,7 +32,6 @@ public class LoginTests extends TestBase {
         randomData.getRandomPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
-        navigatioPage.clearBrowser();
     }
 
     @Tag("NegativeAuthorization")
@@ -48,7 +46,6 @@ public class LoginTests extends TestBase {
         randomData.getPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
-        navigatioPage.clearBrowser();
     }
 
     @Tag("NegativeAuthorization")
@@ -63,7 +60,6 @@ public class LoginTests extends TestBase {
         randomData.getRandomPassword();
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
-        navigatioPage.clearBrowser();
     }
 
     @Tag("NegativeAuthorization")
@@ -81,6 +77,5 @@ public class LoginTests extends TestBase {
         authorization.authForm(email, password);
         navigatioPage.clickInputButton();
         checkPage.checkMessageIncorrectLoginPassword();
-        navigatioPage.clearBrowser();
     }
 }
