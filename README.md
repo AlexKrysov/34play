@@ -112,7 +112,7 @@
 
 
 
-<img title="TestOps" src="images/screens/allure testops 2.png" >
+
 
 
 ## <img src="images/logo/Selenoid.svg" width="25" height="25" alt="Allure"/></a> Запись видео из Selenoid при прохождении автотеста:
