@@ -87,7 +87,7 @@
 
 :seven: ALLURE_NOTIFICATIONS_VERSION - (выбор версии allure)
 
-## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/08-alexlis-web/32/allure/">Allure report</a>
+## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/34play_krysov/21/allure/">Allure report</a>
 
 ## ⛅: Overview
 <p align="center">
@@ -109,6 +109,13 @@
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/telegram.png" >
 </p>
+
+## <img src="images/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a> Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/1955/test-cases?treeId=0">Allure TestOps</a>
+<img title="TestOps" src="images/screens/TestOps.png" >
+
+
+## <img src="images/logo/Jira.svg" width="25" height="25"  alt="Allure"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/projects/AUTO/issues/AUTO-1276?filter=allopenissues">Jira</a>
+<img title="Jira" src="images/screens/Jira.png" >
 
 
 
